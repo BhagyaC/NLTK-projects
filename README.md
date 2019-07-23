@@ -34,4 +34,4 @@ Dense matrix are capable of capturing the synonyms of the neighbouring words.
 ### Word embeddings
 The words will have a numeric representation which reflect the sematic and syntatic similarity.
 
-**word is known by company it keeps**
+**word is known by company it keeps -John Rupert Firth**
