@@ -35,3 +35,11 @@ Dense matrix are capable of capturing the synonyms of the neighbouring words.
 The words will have a numeric representation which reflect the sematic and syntatic similarity.
 
 **word is known by company it keeps -John Rupert Firth**
+
+### Sequence Learning
+
+Once the words are understood in certain fashion its all about understanding the sentences.
+Sequence learning is the study of machine learning algorithms for the application that require a sequence dara or a temporal data.
+
+Inorder to implement the sequence learning RNN comes into the play.
+Like an image we are not considering it as a whole for text we have to read the document sequentially to understand the content.
