@@ -1,6 +1,6 @@
 # Text Analysis
 
-###step 1: Tokenization
+### step 1: Tokenization
 
 Tokenization is the first step in text analytics.
 The process of breaking down a text paragraph into smaller chunks such as words or sentence is called Tokenization. 
