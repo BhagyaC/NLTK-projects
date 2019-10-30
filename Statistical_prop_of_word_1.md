@@ -85,7 +85,7 @@ where the tf and idf are multiplied together
 - This is used to estimate the number of unique terms M in a corpus given the total number of token
 - M proportional to T^b 
 - M = k*T^b
-- where 30<= k<=100 and b approx = 0.49 
+- where 10<= k<=100 and b approx = 0.49 
 - According to the emperical law the dictionary or the vocabulary size increase linearly with the total number of token or words in the corpus .It emphasizes that the importance of the compression of the dictionary
 - This law emphasises that we need to reduce the vocab by stemming and lemmatization
 
