@@ -67,7 +67,14 @@
 ### TF- IDF
 where the tf and idf are multiplied together
 
+- In order to attenuate the effect of frequently occuring terms, It is important to scale it down and at the same time it is necessary to increase th weight of terms that occur rarely.
+
 - IDF is the measure of the informativeness
+- rare document gets a significant higher value
+- commonly occuring terms are attenuated
+- It is a measure of informativeness
+- Reduce the tf weight of a term by a factor that grows with its collection frequency
+
 
 ### ZIPF law
 - This law states that for a given copora the frequency of any words is inversely proportional to its rank in the term frequency table.
