@@ -32,13 +32,13 @@ Let V be the unique terms and mod(V) be the size of the vocabulary. Then every v
 - There are unigram , bigram , trigram is named because of how many words are we considering at a time
 - N-gram means sequance of words of length n 
 - Consider the text "peter piper picked a peck of pickled peppers"
-- unigram <s>
-- bigram <s>peter
-- trigram <s><s>peter
+- unigram `<s>`
+- bigram `<s>`peter
+- trigram `<s><s>`peter
 these are the gram for the first round
 - unigram peter
 - bigram peter piper
-- trigram <s>peter piper
+- trigram `<s>`peter piper
 this is for the second round
 and so on
 
