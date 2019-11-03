@@ -53,7 +53,7 @@ a- initialise the weights with random numbers
 - calculate the error
 - update the weights
 - repeat the steps from a until error is less than threshold or predefined number of epochs are over
-### Acivation fuctions
+### Acivation functions examples
 - Hard threshold
 - Sigmoid - middle layer
 - Tanh - middle layer
@@ -74,4 +74,40 @@ a- initialise the weights with random numbers
 - Patterns yielding similar results are merged into one space
 - Dimensionality reduction
 
+### Activation function
+- Why do we need different activation fuction ?
+- **Sigmoid** : limit the value to `[0,1]`
+- the value closer to the tail become zero or one
+- At the bottom tail most value become zero and the most important aspect of learning of neural network is inhibited
+- sigmoid output are not zero centered
+- It is undesirable to have all values squashed near the tails where the gradient is zero 
+- The activation fuction have to be differentiable then only we can able to learn
+- sigmoid is differentiable
+- **Tanh** : similar to sigmoid with limit `[-1,1]`
+- **Rectified linear unit**
+- For values lesser than zero it will be zero otherwise log(1+e^x) for leaky relu for greater than zero its x other wise 0.01x
+- There is a continuous gradient for the neuron to be in the active state
+- Computationally efficient unbounded and not zero centered
 
+### Multiclass decision function
+- All linear classifier  are used for binary classification
+- In the case of more than two classes are there then we need a decision fuction that predicts more than two classes by providing appropriate values
+- An extension to the case funcion may hard to manage
+**Softmax**
+- Need a function that takes as inlut a vector of size with N real numvers and normalize it into a K classes
+- Need a function that normalizes the net output and classes well separated 
+- Need a function that fits the classes using probability and distributes the probability density
+- The one hot encoder can be change to the probability distribution of the input range to the entire output set
+## Gradient descent
+- LOSS function : It is computed based on the mean square error
+- `L = 0.5*(y-ÿ)^2`
+- COST function : It is a function of model parameters and bias
+- J(θ) - 0.5*Σ L(y,ÿ)^2
+- θ = (w,b) weight and bias
+- We use gradient descent to adjust the weights and as a result to minimize the cost function
+- Initialize the weights to random values
+- Iteratively adjust the weights in the direction of steepest descent or in the direction that most decreases the cost fuction
+- The learning parameter eta is used
+- It is used to get into the minimum
+
+- 
