@@ -66,4 +66,54 @@
 - uj = Vw^T* h
 - In the output layer we apply the softmax then we will get the output
 - At the output layer we apply the softmax to get the posterior distribution of the words It is obtained by `p(wj|wI)= yj`
-- 
+- How to update the weight- almost similar to the back propagation and we are using another error mechanism
+- The learning / training objective is to maximize ot minimize the error between the target and the computed value of the of the target which is yj* - t and t is same as the input vector in this case .We use cross-entropy as it provides us with a good measure of "error distance"
+- minimising the error is also same as maximising the probability
+- w0 is the output word and E is the loss function . It is the special case of cross- entropy measurement between two probabilistic distribution uj* and uj'
+- why cross entropy - log p(x) is well scaled
+- selection of step size is easier
+- with p(x) multiplication may yield to naer zero causing underflow
+- For better optization logp(x) is considered
+- we update the weight using partial derivatives
+- yj-tj = ej which is the prediction error
+- Then use the chain rule 
+- calculate the   new weight using the old values
+- Once the weights are changed we have another set of values to the hidden layer as inputs
+- **Some more insights**
+- The prediction error E propagates the weighted sum of all words in the vocabulary to every output vector vj'
+- The change in the input vector is defined by the output vector which in turn is updated due to the prediction error
+- Ideally vj.vj' results in an identity- it is for the learning the same words and creating their vectors
+- The rows of the input hidden layer vj stores the features of the words in the vocabulary v
+- model parameters accumulate the changes until the system reaches a state of equilibrium
+### Matrix operations
+- The words we want to train - we love NLP and machine learning
+-  `we --> [1 0 0 0 0 0]` etc
+- construct a matrix of size 6*10 - 10 is the hidden layer
+- the 6*10 is the input to the hidden layer xw^T
+- then in h = 10*1
+- then v = will be 6
+- h*v^T will create *6which is the input to the output layer
+- softmax - will give a 6*1 
+ - 6*1 error also calculated
+ - passed to h (1*10) and the error for w is calculated
+ - and the weights are updated like `[wij(new)] = [wij(old)] - η[e.h^T]`
+ - Once the training is completed we can neglet the context and hidden layer the embedding layer will give the index of the word, the index of the row in the embedding matrix word  is a word vector
+ ## Multiple words model using the CBOW
+ - C is the number of context word
+ - V is the vocabulary
+ - hi recieves the average of the vectors of the input context word
+ - The output vector v' is the colomn vector in V represent the relation between the context word and the target word
+ - sofmax is used for the output layer for the probability distribution of the target word
+ - uj is the context vector
+ - uj = V^T*h
+ - h = 1/C*W^T*(x1+x2+...)
+ - find the error value using cross entropy
+ - update the input parameter using `vnew = vold - 1/c*η*EH^T`
+ - It will have a distributed representation of vectors 
+ - The learned vector explicitly encodes many linguistic regularities and patterns
+ - The learning should produce similar word vectors for those words that appeared in the similar context
+ - In the example we have to figure out about the cosine similarity 
+ - Is it deal with the stemming
+ - car and automobiles
+ - good awesome fantastic
+ 
