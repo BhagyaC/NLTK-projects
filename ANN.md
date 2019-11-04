@@ -110,4 +110,10 @@ a- initialise the weights with random numbers
 - The learning parameter eta is used
 - It is used to get into the minimum
 
-- 
+- It is used to reduce any arbitary function
+- J(θ0, θ1) have to be reduced
+- The function is a point in the function and we will take a 360 degree rotation and then we will take a step that will take you down to a local minimum
+- The local minimum the it goes with the steepest descent will defined with the initial point which is defined with the funcion
+- θj = θj - α partial derivative of  J(θ0,θ1)
+- here we are simultaneously updating the θ0 and θ1
+
