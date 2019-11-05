@@ -45,5 +45,24 @@ and calculate the output as the result of softmax return H,U,Y
 
 ### Balance binary tree
 - consider the words in the vocabulary is in a binary tree format
-- balance binary tree is a - complete binary tree and left node < root < right node
+- balance binary tree is a - complete binary tree and left node  < right node and the sum will be root here becuase we are using the proability value as the edges
 - The all words are represented in the leaf nodes only
+- the path to any word to the vocabulary is known
+- traverse through the tree to reach any word
+- the words can arranged using random order, IS-A relation,TF-IDF  etc
+- The words at the leaf nodes have a normalised probability
+- Thus this is the hierarchial softmax is a well defined multinomial distribution among all words
+- Why we really  need a hierarchial model?
+- It decompose the flat hierarchy into binary tree
+- The path to reach every node is unique
+- Lays the words in a tree- based hierarchy -words as leaves
+- The normalized value for the words are calculated without finding the probability for every word
+- The entire vocabulary is partitioned into classes
+- ANN learns to take decisions instead of directly predicting each word's probability
+- the complexity is reduced to o(V) --> o(log(|v|))
+- If we are constructing then as a huffman encoded-tree would help frequent words to have short unique binary codes
+- H softmax increase the speed more than 50 times 
+### Mapping the output layer to the softmax
+- say we have n nodes assume the node 1 as the first value from the output 
+- calculate the probability second value and assign that  to edge 1-2 and move to the node 2 at the same time calculate the edge value to the 1-3 using 1-p(2)
+- 
