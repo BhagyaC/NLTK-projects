@@ -54,3 +54,11 @@
  - many to many - machine translation
  - many to many synced sequence input and output frame by frame labeling
  - There are many method and variation that can be applied to the RNN
+ 
+## Urolled RNN
+- for x0 there will be h0 and y0
+- for xi there will be h1 and input from h0 and y1 and so on upto hn 
+- we can unroll the rnn through time along with the previous value stored
+
+## RNN based language model
+- 
