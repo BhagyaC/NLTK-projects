@@ -61,4 +61,14 @@
 - we can unroll the rnn through time along with the previous value stored
 
 ## RNN based language model
-- 
+- character based language model - RNN which is an example of word prediction in keyboards
+- consider that it has layers like input layer ,hidden layer, output layer and softmax layer 
+- Here we are sending the charecters as the input
+- the input is given is one hot vector of s then it will predict the u and this is inputed to the next iteration and so on
+- feed one character at a time
+- word based model we will put the words all together
+- **Pros and Cons*
+- Theoretically it is possible to store all historical information in the RNN
+- Vanishing gradient problem - The diminishing value of δ delta makes it difficult to capture the long term memory as we move down the memory lane or layers of hidden nodes
+- What is the solution? - Back propagation through time -BPTT
+
