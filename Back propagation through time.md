@@ -44,4 +44,10 @@
 - **Gradient Clipping** : The gradient is either very large(larger than 1) or very small. This can cause the optimizer to converge
 - To speed up training clip the gradient at certain values
 - Clip the gradient if it exceeds a threshold 
+## Truncated BPTT
+- For applications with long sequence the input is truncated into managable fixed- sized segments. This approach is called Truncated Backpropagation through time 
+- Using RNN it is possible to create some sequence of character that really makes sense
+
+## Gated recurrent unit (GTU
+If the reset gate value --> 0, previous memory states are faded and new information is stored. If the zt is close to 1, the information is copied and retained thereby adjusting the gradient to be alive for the next time step, thereby long-term dependency is stored. BPTT decides the learning of the reset and update gate
 
