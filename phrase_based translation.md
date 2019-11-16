@@ -72,3 +72,10 @@
 - Where N is the n gram size BLEU is 4 gram by default
 - wn is the weights associated with unigram bigram trigram and  4 gram and pn is the modified precision score of the test corpus. The sum of wn = 1 and wn = 1/N 
 
+- There are other metrics
+- NIST based on BLEU
+- METEOR - metric for evaluation of translation with explicit ORdering - using stemming and synonym matching
+- WER - word error rate
+    - used edit distance (levenshtein distance)
+    - finds minimum number of edit operations such as insertion, deletion or substitution needed to change the candidate sentence into the reference sentence
+- GLEU - google bleu correlates well with blue and works with sentence level translation
